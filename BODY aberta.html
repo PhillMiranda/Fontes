@@ -1,0 +1,40 @@
+<script>
+    $( document ).ready( () => {
+         if ( window.location.pathname == "/login/index.php" ) {
+            $("#main-content").addClass( "bg-image-login" );
+            $(".desc").remove();
+            $("h2").remove();
+        }
+
+        $(".loginsub").addClass( "col-sm-4 clearfix" )
+
+        $(".guestsub").remove()
+
+        $("div .zoom").click((e) => {
+            $(e.target)
+               .parents('.zoom')
+               .addClass( "animated flipOutX delay-4s" )
+        })
+    })
+</script>
+
+<script>
+  function openTab(tabId) {
+    var tabs = document.getElementsByClassName("tab-content");
+    for (var i = 0; i < tabs.length; i++) {
+      tabs[i].classList.remove("active");
+    }
+
+    var selectedTab = document.getElementById(tabId);
+    if (selectedTab) {
+      selectedTab.classList.add("active");
+    }
+  }
+</script>
+
+<script>
+// Função para fechar o alerta
+function fecharAlerta() {
+    document.getElementById('alerta').style.display = 'none';
+}
+</script>
